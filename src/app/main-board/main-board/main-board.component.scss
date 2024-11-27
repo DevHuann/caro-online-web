@@ -1,0 +1,41 @@
+section{
+
+    @apply h-full pt-32;
+    .listBoard{
+      @apply w-10/12 ml-auto mr-auto  ;
+      .board{
+        @apply  bg-blue-400 rounded-3xl inline-block ;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-top: 5%;
+        width: 25%;
+        height: 200px;
+        background-image: url("../../../assets/img/bg-board.png");
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        .board_item{
+          @apply w-full h-full ml-auto mr-auto ;
+          .bgTopRoom{
+            @apply flex justify-between mt-4;
+            p{
+              @apply text-3xl
+            }
+            img{
+              @apply w-10 h-10 rounded-full;
+            }
+          }
+          .bgBotRoom{
+            @apply pb-4 pt-16 text-2xl;
+
+          }
+        }
+      }
+      .board:hover{
+        box-shadow: 10px 10px 10px gray ;
+        cursor: pointer;
+      }
+
+    }
+}
+

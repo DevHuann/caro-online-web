@@ -1,0 +1,17 @@
+<section id="showScroll" class=" h-40 w-80 ml-auto mr-auto mt-10">
+  <div  class="messengers overflow-y-scroll break-words h-32 pl-3 pr-3"  #scroll>
+    <div *ngFor="let string of greetings" >
+      <div class="container bg-gray-200 min-w-min max-w-max" style="border-radius: 12px">
+        <p class="p-1 text-black ">{{string}}</p>
+      </div>
+    </div>
+  </div>
+  <form #loginForm=ngForm class="">
+    <div class="rounded-2xl bg-white border border-gray-900 text-black" >
+      <br>
+      <input style="width: 80%;margin-left: 10px; transform: translate(0, -50%);" type="text" placeholder="Type Your Message..." name="newmessage" [(ngModel)]="newmessage" required>
+      <button style="transform: translate(0, -50%);float: right;margin-right: 10px;" id="#scroll"  class="btn btn-primary" (click)="sendMessage()" [disabled]="!loginForm.valid"><i class="fa-regular fa-paper-plane"></i></button>
+    </div>
+  </form>
+</section>
+

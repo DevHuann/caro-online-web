@@ -1,0 +1,30 @@
+<section class="container" style="margin: 0;">
+<!--  <img style="position:absolute;" class="bg" src="/assets/img/ipiccy_image (2).png" alt="">-->
+  <div class="header absolute text-center ">
+
+    <div class=" float-left mt-1" routerLink="/room" (click)="reset()">
+      <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+        <mat-icon>home</mat-icon>
+      </button>
+      <p>Bàn {{boardTransactionId}}</p>
+    </div>
+
+  </div>
+  <div class="body" style="width: 100%;color: white;">
+    <div class="player player1">
+      <p>Player 1:{{user.username}}</p>
+<!--      <p>Số trận thắng: </p>-->
+    </div>
+    <div class="chess-table mt-24">
+      <div class="grid  gap-1 mt-1" *ngFor="let chess of chessBoard,let x=index" style="grid-template-columns: repeat(15, minmax(0, 1fr));">
+        <button style="background: aqua;background-size: cover" class=" h-8 w-8 text-red-700 text-3xl" *ngFor="let btn of chess,let y = index" (click)="pic(x,y)">
+          <img  style="max-width: 20px;;margin: auto;border: none;object-fit: fill;" src="{{btn == '-1' ? '' : btn == 0 ? './assets/img/O.png' : './assets/img/X.png'  }}"></button>
+      </div>
+      <app-main-chat></app-main-chat>
+    </div>
+    <div class="player player2" style="">
+      <p>Player 2: user</p>
+<!--      <p>Số trận thắng:</p>-->
+    </div>
+  </div>
+</section>

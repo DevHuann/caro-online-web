@@ -1,0 +1,9 @@
+<section>
+  <div class="listBoard">
+    <div class="room" *ngFor="let item of room  ">
+      <div class="room-item" (click)="getRoomTransactionByRoomId(item)">
+          <p class="text-white">Phòng {{item.id}}</p>
+      </div>
+    </div>
+  </div>
+</section>

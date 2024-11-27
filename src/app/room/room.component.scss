@@ -1,0 +1,34 @@
+section{
+  @apply h-full w-full;
+  .header{
+    @apply text-white text-xl top-0 w-full ;
+    background-image: url("../../assets/img/bg-header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 7vh;
+    .contentHeader{
+      @apply flex  float-right h-full;
+      .icon {
+        @apply flex mt-auto mb-auto mr-20;
+        i{ @apply ml-5}
+        i:hover{ cursor: pointer}
+
+      }
+      .user{
+        @apply flex mr-5;
+        img{@apply w-8 h-8 rounded-full mt-auto mb-auto mr-2}
+        p{@apply mt-auto mb-auto}
+      }
+      .user:hover{cursor: pointer}
+    }
+
+  }
+  .content{
+    height: 93vh;
+    background-image: url('../../assets/img/bg1.jpg');
+    //background-color: #672f10;
+    background-size: cover;
+    background-clip: border-box;
+  }
+  }
+

@@ -1,0 +1,20 @@
+<section>
+  <div class="header absolute text-center top-1">
+
+    <div class="example-button-container float-left"routerLink="/room">
+      <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+        <mat-icon>home</mat-icon>
+      </button>
+    </div>
+
+  </div>
+  <div class="listBoard">
+    <div class="board" *ngFor="let item of board  ">
+      <div class="board_item" (click)="getBoardTransactionByBoardId(item)">
+        <div class="bgTopRoom">
+          <p class="text-white">Bàn {{item.id}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

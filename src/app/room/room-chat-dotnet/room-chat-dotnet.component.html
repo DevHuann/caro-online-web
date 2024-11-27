@@ -1,0 +1,22 @@
+<h1>CHAT ROOM</h1>
+
+
+<div class="chat-view-box">
+  <div *ngFor="let msg of messages" >
+    {{msg?.message}}
+  </div>
+</div>
+
+<form [formGroup]="chatForm" (ngSubmit)="submitChat()">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Cửa sổ chat</mat-label>
+    <textarea matInput formControlName="message"></textarea>
+  </mat-form-field>
+
+
+  <button mat-button>
+    <mat-icon>send</mat-icon>
+    Send
+  </button>
+</form>

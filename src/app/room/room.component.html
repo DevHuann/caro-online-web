@@ -1,0 +1,18 @@
+<section>
+  <div class="header">
+    <div class="contentHeader">
+
+      <button mat-button [matMenuTriggerFor]="menu">
+        <div class="user">
+        <p class="text-3xl">{{user.username}}</p>
+      </div></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="handleLogout()">Đăng Xuất</button>
+      </mat-menu>
+    </div>
+
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</section>

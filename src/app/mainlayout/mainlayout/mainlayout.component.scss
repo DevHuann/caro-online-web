@@ -1,0 +1,40 @@
+section {
+  @apply h-full pt-16;
+  .listBoard {
+    @apply w-10/12 ml-auto mr-auto  ;
+    .room {
+      @apply bg-amber-800 rounded-3xl inline-block ;
+      margin-left: 4%;
+      margin-right: 4%;
+      margin-top: 5%;
+      width: 25%;
+      height: 150px;
+      background-image: url("../../../assets/img/bg-room.jpg");
+      .room-item {
+        @apply w-full h-full ml-auto mr-auto ;
+        text-align: center;
+        .bgTopRoom {
+          @apply flex justify-between mt-4;
+
+
+          img {
+            @apply w-10 h-10 rounded-full;
+          }
+        }
+        p {
+          @apply text-3xl
+        }
+        .bgBotRoom {
+          @apply pb-4 pt-16 text-2xl;
+
+        }
+      }
+    }
+
+    .room:hover {
+      box-shadow: 10px 10px 10px gray;
+      cursor: pointer;
+    }
+
+  }
+}

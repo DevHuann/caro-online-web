@@ -1,0 +1,44 @@
+.container {
+  //@apply relative ;
+
+.bg{
+  width: 100vw;
+}
+  .header {
+    @apply  justify-between bg-transparent text-white items-center text-center text-xl;
+    height: 7vh;
+    @apply absolute top-0 ;
+    width: 100vw;
+    button:hover{
+
+    }
+    label {
+
+    }
+    .icon {
+      @apply grid grid-cols-3 text-center mr-5;
+    }
+  }
+
+  .body {
+    @apply flex justify-between  absolute ;
+    .player {
+      @apply  h-52 w-52 border-2 flex flex-col justify-center items-center text-2xl font-medium border-white;
+      @apply   mt-20;
+    }
+
+
+    .playchess {
+      @apply mt-20 bg-white flex flex-col;
+      height: 660px;
+      .item1 {
+        @apply border border-black  ;
+        width: 33px;
+        height: 36px;
+      }
+    }
+  }
+}
+
+
+
